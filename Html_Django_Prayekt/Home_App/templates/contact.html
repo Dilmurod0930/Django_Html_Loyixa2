@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biz haqimizda - O‘quv Markazi</title>
+    <title>Bog‘lanish - O‘quv Markazi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
         }
         header {
             background-color: #007bff;
@@ -30,25 +30,45 @@
             text-decoration: underline;
         }
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 40px auto;
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         h2 {
             color: #333;
+            margin-bottom: 20px;
         }
-        p {
-            line-height: 1.6;
-            color: #555;
+        form {
+            display: grid;
+            gap: 15px;
         }
-        .highlight {
-            background: #e6f0ff;
+        input, textarea {
+            width: 100%;
             padding: 10px;
-            border-left: 5px solid #007bff;
-            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .info {
+            margin-top: 30px;
+        }
+        .info p {
+            margin: 8px 0;
         }
         footer {
             background: #333;
@@ -62,35 +82,32 @@
 <body>
 
     <header>
-        <h1>Biz haqimizda</h1>
+        <h1>Bog‘lanish</h1>
     </header>
 
     <nav>
-        <a href="index.html">Asosiy</a>
-        <a href="kurslar.html">Kurslar</a>
-        <a href="about.html">Biz haqimizda</a>
+        <a href="{% url 'home'%}">Asosiy</a>
+        <a href="{% url 'kurs'%}">Kurslar</a>
+        <a href="{% url 'about'%}">Biz haqimizda</a>
         <a href="#">Bog‘lanish</a>
     </nav>
 
     <div class="container">
-        <h2>O‘quv markazimizga xush kelibsiz!</h2>
-        <p>Bizning o‘quv markazimiz 2020-yildan beri yoshlar va kattalarni zamonaviy bilimlar bilan ta’minlab kelmoqda. Maqsadimiz — har bir o‘quvchiga sifatli ta’lim berish, ularni zamonaviy kasblarga yo‘naltirish va o‘z maqsadlariga erishishda ko‘mak berishdir.</p>
+        <h2>Biz bilan bog‘laning</h2>
 
-        <div class="highlight">
-            <strong>📌 Asosiy yo‘nalishlar:</strong>
-            <ul>
-                <li>Dasturlash va IT sohalari</li>
-                <li>Xorijiy tillar (Ingliz tili, Rus tili)</li>
-                <li>Grafik dizayn va marketing</li>
-                <li>Kompyuter savodxonligi</li>
-            </ul>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Ismingiz" required>
+            <input type="email" name="email" placeholder="Email manzilingiz" required>
+            <textarea name="message" rows="5" placeholder="Xabaringizni yozing..." required></textarea>
+            <button type="submit">Yuborish</button>
+        </form>
+
+        <div class="info">
+            <h3>Kontakt ma’lumotlar:</h3>
+            <p><strong>📞 Telefon:</strong> +998 90 123 45 67</p>
+            <p><strong>📧 Email:</strong> info@oquvmarkaz.uz</p>
+            <p><strong>📍 Manzil:</strong> Toshkent shahri, Chilonzor tumani, Mustaqillik ko‘chasi 10-uy</p>
         </div>
-
-        <h2>Bizning ustozlar</h2>
-        <p>O‘qituvchilarimiz – o‘z sohasida malakali, tajribali va mehribon ustozlar bo‘lib, har bir o‘quvchiga individual yondashadi. Darslar interaktiv va amaliy mashg‘ulotlarga boy tarzda olib boriladi.</p>
-
-        <h2>Yutuqlarimiz</h2>
-        <p>Bugungi kunga qadar 1500+ dan ortiq o‘quvchi markazimizni tamomlagan va ko‘pchiligi o‘z sohasida faoliyat yuritmoqda. IELTS balini oshirgan, IT kompaniyalarga ishga joylashgan yoki o‘z loyihasini boshlagan yoshlar bizning faxrimizdir.</p>
     </div>
 
     <footer>
