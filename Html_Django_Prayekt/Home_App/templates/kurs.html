@@ -1,10 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurslar - O‘quv Markazi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #0056b3;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 40px 20px;
+        }
+        .course {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .course h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .course p {
+            color: #555;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
+    <header>
+        <h1>Kurslarimiz</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home'%}">Asosiy</a>
+        <a href="#">Kurslar</a>
+        <a href="{% url 'about'%}">Biz haqimizda</a>
+        <a href="{% url 'contact'%}">Bog‘lanish</a>
+    </nav>
+
+    <div class="container">
+        <div class="course">
+            <h2>📘 Dasturlash Asoslari</h2>
+            <p>Python, HTML, CSS, JavaScript kabi dasturlash tillarini noldan boshlab o‘rganing. Kurs davomida amaliy loyihalar yaratiladi.</p>
+            <p><strong>Davomiyligi:</strong> 3 oy</p>
+            <p><strong>Darajasi:</strong> Boshlang‘ich</p>
+        </div>
+
+        <div class="course">
+            <h2>🎨 Grafik Dizayn</h2>
+            <p>Photoshop, Illustrator, Canva va boshqa vositalar yordamida dizayn yaratishni o‘rganing. Portfolio yaratish bo‘yicha maslahatlar ham beriladi.</p>
+            <p><strong>Davomiyligi:</strong> 2 oy</p>
+            <p><strong>Darajasi:</strong> O‘rta</p>
+        </div>
+
+        <div class="course">
+            <h2>🗣️ IELTS Tayyorlov</h2>
+            <p>Listening, Reading, Writing va Speaking bo‘limlari bo‘yicha chuqurlashtirilgan tayyorlov. Tajribali o‘qituvchilar bilan darslar olib boriladi.</p>
+            <p><strong>Davomiyligi:</strong> 3–6 oy (talabga qarab)</p>
+            <p><strong>Darajasi:</strong> B1 va undan yuqori</p>
+        </div>
+
+        <div class="course">
+            <h2>💻 Kompyuter Savodxonligi</h2>
+            <p>Word, Excel, PowerPoint va internetdan foydalanish ko‘nikmalarini o‘rganing. Yoshi katta tinglovchilar uchun ham qulay.</p>
+            <p><strong>Davomiyligi:</strong> 1,5 oy</p>
+            <p><strong>Darajasi:</strong> Boshlang‘ich</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 O‘quv Markazi. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
 </body>
 </html>
