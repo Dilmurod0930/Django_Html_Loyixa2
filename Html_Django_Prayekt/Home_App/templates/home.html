@@ -1,10 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O‘quv Markazi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background: #0056b3;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #004a99;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .course-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+
+    <header>
+        <h1>Bizning O‘quv Markazimizga Xush Kelibsiz!</h1>
+    </header>
+
+    <nav>
+        <a href="#">Asosiy</a>
+        <a href="{% url kurs%}">Kurslar</a>
+        <a href="{% url about%}">Biz haqimizda</a>
+        <a href="{% url contact%}">Bog‘lanish</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Keling, Birgalikda O‘rganamiz!</h1>
+        <p>Zamonaviy kasblarni biz bilan egallang</p>
+    </div>
+
+    <section class="section">
+        <h2>Biz Taklif Qiladigan Kurslar</h2>
+        <div class="courses">
+            <div class="course-card">
+                <h3>Dasturlash Asoslari</h3>
+                <p>Python, HTML, CSS o‘rganing va dasturchi bo‘ling.</p>
+            </div>
+            <div class="course-card">
+                <h3>Grafik Dizayn</h3>
+                <p>Photoshop, Illustrator bilan dizayn yaratishni o‘rganing.</p>
+            </div>
+            <div class="course-card">
+                <h3>IELTS Tayyorlov</h3>
+                <p>Professional ustozlar bilan til bilimingizni oshiring.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 O‘quv Markazi. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
 </body>
 </html>
