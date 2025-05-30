@@ -1,9 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz haqimizda - O‘quv Markazi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #0056b3;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+        .highlight {
+            background: #e6f0ff;
+            padding: 10px;
+            border-left: 5px solid #007bff;
+            margin: 20px 0;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
+    <header>
+        <h1>Biz haqimizda</h1>
+    </header>
+
+    <nav>
+        <a href="{% url home%}">Asosiy</a>
+        <a href="{% url kurs%}">Kurslar</a>
+        <a href="#">Biz haqimizda</a>
+        <a href="{% url contact%}">Bog‘lanish</a>
+    </nav>
+
+    <div class="container">
+        <h2>O‘quv markazimizga xush kelibsiz!</h2>
+        <p>Bizning o‘quv markazimiz 2020-yildan beri yoshlar va kattalarni zamonaviy bilimlar bilan ta’minlab kelmoqda. Maqsadimiz — har bir o‘quvchiga sifatli ta’lim berish, ularni zamonaviy kasblarga yo‘naltirish va o‘z maqsadlariga erishishda ko‘mak berishdir.</p>
+
+        <div class="highlight">
+            <strong>📌 Asosiy yo‘nalishlar:</strong>
+            <ul>
+                <li>Dasturlash va IT sohalari</li>
+                <li>Xorijiy tillar (Ingliz tili, Rus tili)</li>
+                <li>Grafik dizayn va marketing</li>
+                <li>Kompyuter savodxonligi</li>
+            </ul>
+        </div>
+
+        <h2>Bizning ustozlar</h2>
+        <p>O‘qituvchilarimiz – o‘z sohasida malakali, tajribali va mehribon ustozlar bo‘lib, har bir o‘quvchiga individual yondashadi. Darslar interaktiv va amaliy mashg‘ulotlarga boy tarzda olib boriladi.</p>
+
+        <h2>Yutuqlarimiz</h2>
+        <p>Bugungi kunga qadar 1500+ dan ortiq o‘quvchi markazimizni tamomlagan va ko‘pchiligi o‘z sohasida faoliyat yuritmoqda. IELTS balini oshirgan, IT kompaniyalarga ishga joylashgan yoki o‘z loyihasini boshlagan yoshlar bizning faxrimizdir.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 O‘quv Markazi. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
 </body>
 </html>
